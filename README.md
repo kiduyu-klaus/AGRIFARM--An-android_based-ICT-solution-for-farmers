@@ -5,7 +5,7 @@
   <a href="https://android-arsenal.com/api?level=23"><img alt="API" src="https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat"/></a>
   <a href="https://travis-ci.org/skydoves/ElasticViews"><img alt="Build Status" src="https://travis-ci.org/skydoves/ElasticViews.svg?branch=master"/>
   </a>
-  ![GitHub milestones](https://img.shields.io/github/milestones/open/kiduyu-klaus/AGRIFARM--An-android_based-ICT-solution-for-farmers?style=plastic)
+  <img alt="GitHub milestones" src="https://img.shields.io/github/milestones/open/kiduyu-klaus/AGRIFARM--An-android_based-ICT-solution-for-farmers?style=plastic">
   <a href="https://img.shields.io/github/milestones/open/kiduyu-klaus/AGRIFARM--An-android_based-ICT-solution-for-farmers?style=plastic"></a>
 </p>
 <p align="center">
