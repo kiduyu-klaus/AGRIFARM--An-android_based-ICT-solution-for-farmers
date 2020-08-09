@@ -11,14 +11,14 @@
         <item android:id="@+id/user_nav_news"
             android:icon="@drawable/ic_news"
             android:title="news"/>
-        <item android:id="@+id/user_nav_animal"
+        <item android:id="@+id/user_nav_specialist"
             android:icon="@drawable/ic_researcher"
             android:title="Specialists"/>
-        <item android:id="@+id/user_nav_vet"
+        <item android:id="@+id/user_nav_weather"
             android:icon="@drawable/ic_cloudy"
             android:title="Weather"/>
 
-        <item android:id="@+id/user_nav_book"
+        <item android:id="@+id/user_nav_reports"
             android:icon="@drawable/ic_dashboard"
             android:title="Reports"/>
 

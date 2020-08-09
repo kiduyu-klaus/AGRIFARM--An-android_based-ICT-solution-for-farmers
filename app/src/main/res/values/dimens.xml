@@ -59,40 +59,16 @@
     <dimen name="bottom_navigation_text_size_active" tools:override="true">12dp</dimen>
     <dimen name="bottom_navigation_text_size_inactive" tools:override="true">8dp</dimen>
     <dimen name="design_bottom_navigation_icon_size" tools:override="true">6dp</dimen>
-    <!--
-        bottom_navigation_elevation
-        bottom_navigation_height
-        bottom_navigation_icon
-        bottom_navigation_margin_bottom
-        bottom_navigation_margin_top_active
-        bottom_navigation_margin_top_inactive
-        bottom_navigation_max_width
-        bottom_navigation_min_width
-        bottom_navigation_notification_elevation
-        bottom_navigation_notification_height
-        bottom_navigation_notification_margin_left
-        bottom_navigation_notification_margin_left_active
-        bottom_navigation_notification_margin_top
-        bottom_navigation_notification_margin_top_active
-        bottom_navigation_notification_margin_top_classic
-        bottom_navigation_notification_padding
-        bottom_navigation_notification_radius
-        bottom_navigation_notification_text_size
-        bottom_navigation_notification_width
-        bottom_navigation_padding_left
-        bottom_navigation_padding_right
-        bottom_navigation_small_active_max_width
-        bottom_navigation_small_active_min_width
-        bottom_navigation_small_inactive_max_width
-        bottom_navigation_small_inactive_min_width
-        bottom_navigation_small_margin_bottom
-        bottom_navigation_small_margin_top
-        bottom_navigation_small_margin_top_active
-        bottom_navigation_small_selected_width_difference
-        bottom_navigation_text_size_active
-        bottom_navigation_text_size_forced_active
-        bottom_navigation_text_size_forced_inactive
-        bottom_navigation_text_size_inactive
-    -->
+    <dimen name="twenty_four_sp_text_size">24sp</dimen>
+    <dimen name="twenty_four_dp_margin">24dp</dimen>
+    <dimen name="sixteen_dp_margin">16dp</dimen>
+    <dimen name="sixteen_sp_text_size">16sp</dimen>
+    <dimen name="sixty_dp">60dp</dimen>
+    <dimen name="forty_dp">40dp</dimen>
+    <dimen name="thirty_dp">30dp</dimen>
+    <dimen name="sixty_two_sp_text_size">62sp</dimen>
+    <dimen name="eighteen_sp_text_size">18sp</dimen>
+    <dimen name="six_dp_margin">6dp</dimen>
+    <dimen name="tweleve_sp_text_size">12sp</dimen>
 
 </resources>
