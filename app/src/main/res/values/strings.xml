@@ -9,17 +9,9 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="signup_redirect">Don\'t have an account? Register here!</string>
 
-    <string name="min_temp">%1$s\u2103</string>
-    <string name="max_temp">%1$s\u2103</string>
-    <string name="humidity">%1$s%%</string>
-    <string name="pressure">%1$s hpa</string>
-    <string name="sunrise">%1$s AM</string>
-    <string name="sunset">%1$s PM</string>
-    <string name="network_error_string">You are currently offline. Please check your connectivity settings and try again.</string>
-    <string name="generic_error_string">The application has encountered an unknown error. Please try again.</string>
-    <string name="temp_string">%1$s\u2103</string>
-    <string name="last_updated_time">Last Updated: %1$s</string>
+    <string name="splash_button1">Join Now</string>
+    <string name="splash_button2">Already have an Account? Login</string>
 
-    <string name="navigation_drawer_open">Open navigtion drawer</string>
-    <string name="navigation_drawer_close">close navigtion drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

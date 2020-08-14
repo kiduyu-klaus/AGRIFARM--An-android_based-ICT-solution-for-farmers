@@ -42,17 +42,26 @@ dependencies {
     //remember me
     implementation 'io.paperdb:paperdb:2.6'
 
-    //glide
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
-
-    //material styles
-    implementation 'com.github.rey5137:material:1.2.5'
-
     //navigation
     implementation 'androidx.navigation:navigation-fragment:2.0.0'
     implementation 'androidx.navigation:navigation-ui:2.0.0'
 
-    //circle imageview
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.google.android.material:material:1.1.0-beta01'
+
+    //libraries used specially for ChatIt
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    //circular imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    //chrome tabs
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-storage:16.0.4'
+    //for notifications
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 }

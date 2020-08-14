@@ -4,14 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.kiduyu.njugunaproject.agrifarm.StatusBar.StatusBar;
-
-public class RegisterActivity extends AppCompatActivity {
+public class NotificationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusBar.changeStatusBarColor(this);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_notification);
     }
 }

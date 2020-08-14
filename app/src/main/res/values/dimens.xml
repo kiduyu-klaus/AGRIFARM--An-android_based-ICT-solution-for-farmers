@@ -1,74 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <dimen name="margin_left_16">16dp</dimen>
-    <dimen name="margin_right_16">16dp</dimen>
-    <dimen name="margin_top_16">16dp</dimen>
-    <dimen name="margin_bottom_16">16dp</dimen>
+<resources>
+    <dimen name="container_layout_margin">36dp</dimen>
+    <dimen name="btn_corners">6dp</dimen>
+    <dimen name="splash_btn_width">130dp</dimen>
+    <dimen name="divider_height">2dp</dimen>
+    <dimen name="ic_nav_padding_start">16dp</dimen>
+    <dimen name="layout_in_between_margins">16dp</dimen>
+    <dimen name="divider_start_and_end_margins">8dp</dimen>
+    <dimen name="divider_top_and_bottom_margins">8dp</dimen>
 
-    <dimen name="margin_top_8">8dp</dimen>
-    <dimen name="margin_bottom_8">8dp</dimen>
-    <dimen name="margin_left_8">8dp</dimen>
-    <dimen name="margin_right_8">8dp</dimen>
-
-    <dimen name="margin_top_4">4dp</dimen>
-    <dimen name="margin_bottom_4">4dp</dimen>
-    <dimen name="margin_left_4">4dp</dimen>
-    <dimen name="margin_right_4">4dp</dimen>
-
-    <dimen name="radius_2">2dp</dimen>
-    <dimen name="radius_8">8dp</dimen>
-    <dimen name="radius_16">16dp</dimen>
-    <dimen name="radius_24">24dp</dimen>
-    <dimen name="radius_32">32dp</dimen>
-
-    <dimen name="padding_1">1dp</dimen>
-    <dimen name="padding_4">4dp</dimen>
-    <dimen name="padding_8">8dp</dimen>
-    <dimen name="padding_12">12dp</dimen>
-    <dimen name="padding_14">14dp</dimen>
-    <dimen name="padding_16">16dp</dimen>
-
-    <dimen name="text_16">16dp</dimen>
-    <dimen name="text_14">14dp</dimen>
-    <dimen name="text_12">12dp</dimen>
-    <dimen name="text_18">18dp</dimen>
-    <dimen name="text_20">20dp</dimen>
-    <dimen name="text_22">22dp</dimen>
-    <dimen name="text_24">24dp</dimen>
-    <dimen name="text_26">26dp</dimen>
-
-    <dimen name="dimen_1">1dp</dimen>
-    <dimen name="lineSpacingExtra_4">4dp</dimen>
-
-
-    <dimen name="viewportWidth">24.0</dimen>
-    <dimen name="viewportHeight">24.0</dimen>
-
-
-    <dimen name="vector_height">24dp</dimen>
-    <dimen name="vector_width">24dp</dimen>
-
-    <!--    <dimen name="design_bottom_navigation_text_size" tools:override="true">6dp</dimen>
-       <dimen name="design_bottom_navigation_active_text_size" tools:override="true">12dp</dimen>
-      <dimen name="design_bottom_navigation_height" tools:override="true">56dp</dimen>-->
-
-
-    <dimen name="design_bottom_navigation_item_max_width" tools:override="true">400dp</dimen>
-    <dimen name="design_bottom_navigation_active_item_max_width" tools:override="true">400dp</dimen>
-    <dimen name="bottom_navigation_icon" tools:override="true">4dp</dimen>
-    <dimen name="bottom_navigation_text_size_active" tools:override="true">12dp</dimen>
-    <dimen name="bottom_navigation_text_size_inactive" tools:override="true">8dp</dimen>
-    <dimen name="design_bottom_navigation_icon_size" tools:override="true">6dp</dimen>
-    <dimen name="twenty_four_sp_text_size">24sp</dimen>
-    <dimen name="twenty_four_dp_margin">24dp</dimen>
-    <dimen name="sixteen_dp_margin">16dp</dimen>
-    <dimen name="sixteen_sp_text_size">16sp</dimen>
-    <dimen name="sixty_dp">60dp</dimen>
-    <dimen name="forty_dp">40dp</dimen>
-    <dimen name="thirty_dp">30dp</dimen>
-    <dimen name="sixty_two_sp_text_size">62sp</dimen>
-    <dimen name="eighteen_sp_text_size">18sp</dimen>
-    <dimen name="six_dp_margin">6dp</dimen>
-    <dimen name="tweleve_sp_text_size">12sp</dimen>
-
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="nav_header_height">175dp</dimen>
 </resources>

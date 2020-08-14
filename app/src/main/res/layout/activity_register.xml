@@ -1,131 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_true"
-    tools:context=".RegisterActivity">
+    tools:context=".LoginActivity"
+    android:id="@+id/mainLayout"
+    android:focusableInTouchMode="true">
 
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
-
-        >
-
+    <LinearLayout
+        style="@style/df_row_vertical"
+        android:layout_height="match_parent"
+        android:weightSum="12">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/df_danger"
+            android:layout_weight="5"
             android:orientation="vertical"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            >
-
+            android:gravity="center"
+            tools:ignore="Suspicious0dp">
 
             <ImageView
-                android:id="@+id/ivRegLogo"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-
-                android:layout_marginBottom="55dp"
-                android:layout_marginTop="18dp"
-                android:contentDescription="TODO"
-                android:scaleType="fitCenter"
-                android:src="@drawable/logo" />
-
-
-
-            <ImageView
-                android:id="@+id/ivJoinUs"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginBottom="15dp"
-                android:contentDescription="TODO"
-                android:src="@drawable/joinus_text" />
-
-
-            <AutoCompleteTextView
-                android:id="@+id/atvUsernameReg"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_rect"
-                android:drawableLeft="@drawable/icon_person"
-                android:drawablePadding="10dp"
-                android:drawableStart="@drawable/icon_person"
-                android:hint="@string/usernameReg"
-                android:paddingEnd="10dp"
-                android:paddingStart="10dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/gray"
-                android:textSize="15sp" />
-
-
-            <AutoCompleteTextView
-                android:id="@+id/atvEmailReg"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_rect"
-                android:drawableLeft="@drawable/icon_mail"
-                android:drawablePadding="10dp"
-                android:drawableStart="@drawable/icon_mail"
-                android:hint="@string/emailReg"
-                android:paddingEnd="10dp"
-                android:paddingStart="10dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/gray"
-                android:textSize="15sp" />
-
-
-
-            <AutoCompleteTextView
-                android:id="@+id/atvPasswordReg"
-                android:inputType="textPassword"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_rect"
-                android:drawableLeft="@drawable/icon_password"
-                android:drawablePadding="10dp"
-                android:drawableStart="@drawable/icon_password"
-                android:hint="@string/passwordReg"
-                android:paddingEnd="10dp"
-                android:paddingStart="10dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/gray"
-                android:textSize="15sp" />
-
-
-            <Button
-                android:id="@+id/btnSignUp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/btnsignup_gradient"
-                android:text="@string/sign_upReg"
-                android:textColor="#FFFFFF" />
+                android:id="@+id/imageViewLogo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/closee"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center" />
 
             <TextView
-                android:id="@+id/tvSignIn"
+                style="@style/df_h3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:text="@string/signin_redirect"
-                android:textColor="@color/gray" />
-
-
+                android:text="@string/app_name"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:background="@color/formBg"
+            android:padding="20dp"
+            tools:ignore="Suspicious0dp">
+
+            <LinearLayout
+                android:id="@+id/sendOtpLayout"
+                style="@style/df_row_vertical"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutUfullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextUfullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Fullname"
+                        android:inputType="text"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutuphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextUphonee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone Number"
+                        android:inputType="text"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutUname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextUname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:inputType="text"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutPassword"
+                    android:layout_width="match_parent"
+                    app:passwordToggleEnabled="true"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/buttonSendOtp"
+                    android:layout_marginTop="40dp"
+                    android:layout_width="match_parent"
+                    style="@style/df4_btn_danger"
+                    android:layout_gravity="center_vertical"
+                    android:text="Register"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginTop="24dp"
+                    style="@style/df_h6"
+                    android:text="Already have an Account? Login Now!"/>
 
 
-    </ScrollView>
+            </LinearLayout>
 
-</RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

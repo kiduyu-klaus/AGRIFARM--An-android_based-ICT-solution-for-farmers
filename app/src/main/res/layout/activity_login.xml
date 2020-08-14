@@ -1,132 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_true"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:id="@+id/mainLayout"
+    android:focusableInTouchMode="true">
 
-
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-
-        >
-
+    <LinearLayout
+        style="@style/df_row_vertical"
+        android:layout_height="match_parent"
+        android:weightSum="12">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            android:layout_weight="6"
             android:orientation="vertical"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            >
+            android:gravity="center"
+            tools:ignore="Suspicious0dp">
 
-
-            <ImageView
-                android:id="@+id/ivLogLogo"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-
-                android:layout_marginBottom="55dp"
-                android:layout_marginTop="18dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/logo" />
-
-
-            <ImageView
-                android:id="@+id/ivSignIn"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginBottom="15dp"
-                android:contentDescription="Sign in text on registration activity"
-                android:src="@drawable/sign_in" />
-
-
-            <AutoCompleteTextView
-                android:id="@+id/atvEmailLog"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_rect"
-                android:drawableLeft="@drawable/icon_person"
-                android:drawablePadding="10dp"
-                android:drawableStart="@drawable/icon_person"
-                android:hint="@string/emailReg"
-                android:paddingEnd="10dp"
-                android:paddingStart="10dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/gray"
-                android:textSize="15sp" />
-
-
-            <AutoCompleteTextView
-                android:id="@+id/atvPasswordLog"
-                android:inputType="textPassword"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_rect"
-                android:drawableLeft="@drawable/icon_password"
-                android:drawablePadding="10dp"
-                android:drawableStart="@drawable/icon_password"
-                android:hint="@string/passwordReg"
-                android:paddingEnd="10dp"
-                android:paddingStart="10dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/gray"
-                android:textSize="15sp" />
-
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="200dp"
+                android:scaleType="centerCrop"
+                android:layout_height="200dp"
+                android:src="@drawable/closee"
+                android:layout_gravity="center" />
 
             <TextView
-                android:id="@+id/tvForgotPass"
+                style="@style/df_h3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:text="@string/forgot_password"
-                android:textColor="@color/gray" />
-
-
-            <Button
-                android:id="@+id/btnSignIn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/btnsignin_gradient"
-                android:text="@string/sign_inLog"
-                android:textColor="#FFFFFF" />
-
-
-            <ImageView
-                android:id="@+id/ivFacebook"
-                android:layout_width="match_parent"
-                android:layout_height="51dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="Social site button"
-                android:src="@drawable/btn_twitter" />
-
-
-            <TextView
-                android:id="@+id/tvSignIn_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="@string/signup_redirect"
-                android:textColor="@color/gray" />
-
+                android:text="@string/app_name"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:background="@color/formBg"
+            android:padding="20dp"
+            tools:ignore="Suspicious0dp">
+
+            <LinearLayout
+                android:id="@+id/sendOtpLayout"
+                style="@style/df_row_vertical"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutUname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextUname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:inputType="text"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutPassword"
+                    android:layout_width="match_parent"
+                    app:passwordToggleEnabled="true"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/buttonSendOtp"
+                    android:layout_marginTop="40dp"
+                    android:layout_width="match_parent"
+                    style="@style/df4_btn_danger"
+                    android:onClick="home"
+                    android:layout_gravity="center_vertical"
+                    android:text="Login"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginTop="24dp"
+                    style="@style/df_h6"
+                    android:text="Register Now!"/>
 
 
-    </ScrollView>
+            </LinearLayout>
 
-</RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
