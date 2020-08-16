@@ -30,12 +30,16 @@ public class HomeActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     TextView txtActiontitle;
     CircleImageView circleImageView;
+    RelativeLayout relativeLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         StatusBar.changeStatusBarColor(this);
         setContentView(R.layout.activity_home);
+
+        relativeLayout= findViewById(R.id.layoutid);
 
         txtActiontitle = findViewById(R.id.txt_actiontitle);
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -67,32 +71,44 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case R.id.lvl_home:
                 txtActiontitle.setText("Home");
+                Glide.with(this).load(R.drawable.ic_home).into(circleImageView);
+                relativeLayout.setBackgroundColor(Color.parseColor("#FFF3F0F0"));
                 fragment = new HomeFragment();
                 callFragment(fragment);
                 break;
             case R.id.myprofile:
                 txtActiontitle.setText("Profile");
+                Glide.with(this).load(R.drawable.ic_person).into(circleImageView);
+                relativeLayout.setBackgroundColor(Color.parseColor("#FFF3F0F0"));
                 fragment = new ProfileFragment();
                 callFragment(fragment);
                 break;
             case R.id.weather:
                 txtActiontitle.setText("Weather Updates");
+                Glide.with(this).load(R.drawable.ic_cloudy).into(circleImageView);
+                relativeLayout.setBackground(getDrawable(R.drawable.appbackground));
                 fragment = new WeatherFragment();
                 callFragment(fragment);
                 break;
             case R.id.news:
                 txtActiontitle.setText("News Updates");
+                Glide.with(this).load(R.drawable.ic_news).into(circleImageView);
+                relativeLayout.setBackgroundColor(Color.parseColor("#FFF3F0F0"));
                 fragment = new NewsFragment();
                 callFragment(fragment);
 
                 break;
             case R.id.specialists:
                 txtActiontitle.setText("Available Specialists");
+                Glide.with(this).load(R.drawable.ic_researcher).into(circleImageView);
+                relativeLayout.setBackgroundColor(Color.parseColor("#FFF3F0F0"));
                 fragment = new SpecialistsFragment();
                 callFragment(fragment);
                 break;
             case R.id.reports:
                 txtActiontitle.setText("Generate Reports");
+                Glide.with(this).load(R.drawable.ic_dashboard).into(circleImageView);
+                relativeLayout.setBackgroundColor(Color.parseColor("#FFF3F0F0"));
                 fragment = new ReportsFragment();
                 callFragment(fragment);
 
