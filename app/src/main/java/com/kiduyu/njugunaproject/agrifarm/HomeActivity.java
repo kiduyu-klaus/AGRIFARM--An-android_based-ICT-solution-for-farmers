@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.kiduyu.njugunaproject.agrifarm.StatusBar.StatusBar;
+import com.kiduyu.njugunaproject.agrifarm.UserFargments.AppointmentsFragment;
 import com.kiduyu.njugunaproject.agrifarm.UserFargments.HomeFragment;
 import com.kiduyu.njugunaproject.agrifarm.UserFargments.NewsFragment;
 import com.kiduyu.njugunaproject.agrifarm.UserFargments.ProfileFragment;
@@ -88,6 +89,13 @@ public class HomeActivity extends AppCompatActivity {
                 Glide.with(this).load(R.drawable.ic_cloudy).into(circleImageView);
                 relativeLayout.setBackground(getDrawable(R.drawable.appbackground));
                 fragment = new WeatherFragment();
+                callFragment(fragment);
+                break;
+            case R.id.applications:
+                txtActiontitle.setText("My Appointments");
+                Glide.with(this).load(R.drawable.ic_person).into(circleImageView);
+                relativeLayout.setBackground(getDrawable(R.drawable.appbackground));
+                fragment = new AppointmentsFragment();
                 callFragment(fragment);
                 break;
             case R.id.news:

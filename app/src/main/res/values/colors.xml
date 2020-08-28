@@ -19,7 +19,6 @@
     <color name="colorBalck">#131313</color>
     <color name="colorRad">#d71c32</color>
     <color name="primary_txt">#212121</color>
-    <color name="orange">#ff563f</color>
     <color name="fb_blue">#475993</color>
     <color name="edit_text_hint">#999999</color>
     <color name="edit_text_txt">#999999</color>
@@ -28,6 +27,13 @@
     <color name="divider_or">#999999</color>
     <color name="account">#999999</color>
     <color name="text_light">#ffffff</color>
+
+    <color name="skyBlue">#FF17A8EC</color>
+    <color name="green">#7fec20</color>
+    <color name="darkGreen">#009688</color>
+    <color name="orange">#FF8F00</color>
+
+    <color name="most_button_Used">#0F7DC2</color>
 
     //views
     <color name="textView_title_latestListView_adapter">#606060</color>
@@ -42,4 +48,94 @@
     <color name="ratingBarNormal">#60A7BB</color>
     <color name="ratingSelect">#FEB500</color>
     <color name="rating">#1d8612</color>
+
+    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#7c4dff</color>
+    <color name="yello">#ffb300</color>
+    <color name="darkblue">#23283a</color>
+    <color name="testcolorblue">#152b38</color>
+    <color name="pink">#fe104d</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+    <color name="grey_95">#1a1a1a</color>
+    <color name="grey_100_">#0d0d0d</color>
+
+    <color name="orange_300">#FFB74D</color>
+    <color name="orange_400">#FFA726</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="indigo_400">#5C6BC0</color>
+    <color name="red_300">#F70519</color>
+    <color name="light_green_500">#8BC34A</color>
+
+    <color name="blue_grey_800">#37474F</color>
+    <color name="blue_grey_900">#263238</color>
+    <color name="blue_grey_800_overlay">#E637474F</color>
+    <color name="blue_grey_50">#ECEFF1</color>
+    <color name="blue_grey_100">#CFD8DC</color>
+    <color name="blue_grey_200">#B0BEC5</color>
+    <color name="blue_grey_300">#90A4AE</color>
+    <color name="blue_grey_400">#78909C</color>
+    <color name="blue_grey_500">#607D8B</color>
+    <color name="blue_grey_600">#546E7A</color>
+    <color name="blue_grey_700">#455A64</color>
+
+    <color name="purple_50">#F3E5F5</color>
+    <color name="purple_100">#E1BEE7</color>
+    <color name="purple_200">#CE93D8</color>
+    <color name="purple_300">#BA68C8</color>
+    <color name="purple_400">#AB47BC</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="purple_600">#8E24AA</color>
+    <color name="purple_700">#7B1FA2</color>
+    <color name="purple_800">#6A1B9A</color>
+    <color name="purple_900">#4A148C</color>
+    <color name="purple_A100">#EA80FC</color>
+    <color name="purple_A200">#E040FB</color>
+    <color name="purple_A400">#D500F9</color>
+    <color name="purple_A700">#AA00FF</color>
+
+    <color name="light_green_700">#689F38</color>
+    <color name="secondaryText">#D9757575</color>
+    <color name="textGray">#616161</color>
+    <color name="primaryText">#212121</color>
+    <color name="timeColor">#A6616161</color>
+    <color name="light_background">#f2f2f2</color>
+    <color name="rvDivider">#CCe0e0e0</color>
+
+    <color name="overlay_dark_10">#1A000000</color>
+    <color name="overlay_dark_20">#33000000</color>
+    <color name="overlay_dark_30">#4D000000</color>
+    <color name="overlay_dark_40">#66000000</color>
+    <color name="overlay_dark_50">#80000000</color>
+    <color name="overlay_dark_60">#99000000</color>
+    <color name="overlay_dark_70">#B3000000</color>
+    <color name="overlay_dark_80">#CC000000</color>
+    <color name="overlay_dark_90">#E6000000</color>
+
+    <color name="blue_50">#E3F2FD</color>
+    <color name="blue_100">#BBDEFB</color>
+    <color name="blue_200">#90CAF9</color>
+    <color name="blue_300">#64B5F6</color>
+    <color name="blue_400">#42A5F5</color>
+    <color name="blue_500">#2196F3</color>
+
+    <color name="light_blue_400">#29B6F6</color>
+    <color name="light_green_300">#AED581</color>
+    <color name="overlay_light_20">#33FFFFFF</color>
+
+
+    <color name="background">#f5f7fa</color>
+    <color name="textcolor">#4c6086</color>
+    <color name="textdark">#2D2D2D</color>
+
 </resources>

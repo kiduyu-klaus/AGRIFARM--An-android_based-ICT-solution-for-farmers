@@ -20,4 +20,5 @@
     <string name="todo">TODO</string>
     <string name="show_weather">show weather</string>
     <string name="text_view">Text View</string>
+    <string name="short_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
 </resources>

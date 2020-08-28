@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appointment_refresh"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ly_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/search_editText_tip"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="10dp"
+            android:hint="Search Appointments"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_appointments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

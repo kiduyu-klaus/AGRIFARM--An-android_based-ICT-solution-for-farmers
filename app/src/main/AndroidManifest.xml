@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NotificationActivity"></activity>
+        <activity android:name=".BookAppointment"
+            android:theme="@style/AppThemeAction"></activity>
+        <activity android:name=".NotificationActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
@@ -21,6 +23,5 @@
             </intent-filter>
         </activity>
     </application>
-
 
 </manifest>

@@ -17,8 +17,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.kiduyu.njugunaproject.agrifarm.Adapter.ApplicationAdapter;
 import com.kiduyu.njugunaproject.agrifarm.Adapter.SpecialistAdapter;
 import com.kiduyu.njugunaproject.agrifarm.Constants.Constants;
+import com.kiduyu.njugunaproject.agrifarm.Model.Application;
 import com.kiduyu.njugunaproject.agrifarm.Model.Specialist;
 import com.kiduyu.njugunaproject.agrifarm.R;
 import com.shashank.sony.fancytoastlib.FancyToast;
@@ -29,24 +31,23 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class SpecialistsFragment extends Fragment {
-    private SpecialistAdapter specialistAdapter;
+public class AppointmentsFragment extends Fragment {
+    private ApplicationAdapter applicationAdapter;
     public static boolean isRefreshed;
     RequestQueue mRequestQueue;
     RecyclerView recycler;
     SwipeRefreshLayout swipeRefreshLayout;
-    private ArrayList<Specialist> specialistArrayList = new ArrayList<>();
-
+    private ArrayList<Application> applicationArrayList = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View layout = inflater.inflate(R.layout.specialist_fragment, container, false);
+        View layout = inflater.inflate(R.layout.appointments_fragment, container, false);
 
         mRequestQueue = Volley.newRequestQueue(getActivity());
 
-        recycler = layout.findViewById(R.id.recyclerview_consultant);
+        recycler = layout.findViewById(R.id.recyclerview_appointments);
 
-        swipeRefreshLayout = layout.findViewById(R.id.consultant_refresh);
+        swipeRefreshLayout = layout.findViewById(R.id.appointment_refresh);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false);
 
         recycler.setLayoutManager(layoutManager);
@@ -62,11 +63,14 @@ public class SpecialistsFragment extends Fragment {
                 FancyToast.makeText(getActivity(), "Data refreshed!", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, false).show();
             }
         });
+
+
         return layout;
     }
 
     private void fetchData() {
-        String urlForJsonObject = Constants.BASE_API + Constants.SPECIALIST_API;
+
+        String urlForJsonObject = Constants.BASE_API + Constants.SPECIALIST_LIST;
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,
                 urlForJsonObject,
@@ -75,49 +79,47 @@ public class SpecialistsFragment extends Fragment {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         try {
-                            JSONArray jsonArray = jsonObject.getJSONArray("consultants");
+                            JSONArray jsonArray = jsonObject.getJSONArray("application");
 
                             if (isRefreshed) {
-                                specialistArrayList.clear();
+                               applicationArrayList.clear();
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject consultant = jsonArray.getJSONObject(i);
-                                    String Name = consultant.getString("name");
-                                    String phone = consultant.getString("phone");
-                                    String idnumber = consultant.getString("id_number");
-                                    String location = consultant.getString("location");
-                                    String image = consultant.getString("image");
-                                    String date = consultant.getString("date");
+                                    String sname = consultant.getString("sname");
+                                    String uname = consultant.getString("uname");
+                                    String uphone = consultant.getString("uphone");
+                                    String sphone = consultant.getString("sphone");
+                                    String datevalue = consultant.getString("datevalue");
+                                    String timevalue = consultant.getString("timevalue");
 
-                                    Log.d("TAG", "onResponse: " + Name + " " + phone + " " + idnumber + " " + location + " " + image + " " + date);
+                                    Log.d("TAG", "onResponse: " + sname + " " + uname + " " + uphone + " " + sphone + " " + datevalue + " " + timevalue);
                                     //Loading.showProgressDialog(getActivity(),false);
-                                    specialistArrayList.add(new Specialist("",Name,phone,idnumber,location,image,date));
+                                   applicationArrayList.add(new Application(sname,uname,uphone,sphone,datevalue,timevalue));
                                     //tipArrayList.add(new Tip(title, description ,image));
 
                                 }
 
                             } else {
-                                specialistArrayList.clear();
+                                applicationArrayList.clear();
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject consultant = jsonArray.getJSONObject(i);
-                                    String Name = consultant.getString("name");
-                                    String phone = consultant.getString("phone");
-                                    String idnumber = consultant.getString("id_number");
-                                    String location = consultant.getString("location");
-                                    String image = consultant.getString("image");
-                                    String date = consultant.getString("date");
+                                    String sname = consultant.getString("sname");
+                                    String uname = consultant.getString("uname");
+                                    String uphone = consultant.getString("uphone");
+                                    String sphone = consultant.getString("sphone");
+                                    String datevalue = consultant.getString("datevalue");
+                                    String timevalue = consultant.getString("timevalue");
 
-                                    Log.d("TAG", "onResponse: " + Name + " " + phone + " " + idnumber + " " + location + " " + image + " " + date);
+                                    Log.d("TAG", "onResponse: " + sname + " " + uname + " " + uphone + " " + sphone + " " + datevalue + " " + timevalue);
                                     //Loading.showProgressDialog(getActivity(),false);
-
-                                    //tipArrayList.add(new Tip(title, description ,image));
-                                    specialistArrayList.add(new Specialist("",Name,phone,idnumber,location,image,date));
+                                    applicationArrayList.add(new Application(sname,uname,uphone,sphone,datevalue,timevalue));
 
                                 }
                             }
 
 
-                            specialistAdapter = new SpecialistAdapter(getActivity(), specialistArrayList);
-                            recycler.setAdapter(specialistAdapter);
+                            applicationAdapter = new ApplicationAdapter(getActivity(), applicationArrayList);
+                         recycler.setAdapter(applicationAdapter);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -132,4 +134,5 @@ public class SpecialistsFragment extends Fragment {
         });
         mRequestQueue.add(request);
     }
+
 }
