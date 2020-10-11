@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".RegisterActivity"
     android:id="@+id/mainLayout"
     android:focusableInTouchMode="true">
 
@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content">
 
                     <EditText
-                        android:id="@+id/editTextUname"
+                        android:id="@+id/editTextUname_r_a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Username"
@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content">
 
                     <EditText
-                        android:id="@+id/editTextPassword"
+                        android:id="@+id/editTextPassword_r_v"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Password"
@@ -118,6 +118,7 @@
 
                 <Button
                     android:id="@+id/buttonSendOtp"
+                    android:onClick="Validate"
                     android:layout_marginTop="40dp"
                     android:layout_width="match_parent"
                     style="@style/df4_btn_danger"
@@ -125,6 +126,7 @@
                     android:text="Register"/>
 
                 <TextView
+                    android:onClick="toLogin"
                     android:layout_width="wrap_content"
                     android:textSize="12sp"
                     android:layout_marginTop="24dp"

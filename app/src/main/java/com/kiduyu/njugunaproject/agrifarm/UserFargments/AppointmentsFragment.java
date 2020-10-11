@@ -1,10 +1,14 @@
 package com.kiduyu.njugunaproject.agrifarm.UserFargments;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -36,6 +40,7 @@ public class AppointmentsFragment extends Fragment {
     public static boolean isRefreshed;
     RequestQueue mRequestQueue;
     RecyclerView recycler;
+    EditText search;
     SwipeRefreshLayout swipeRefreshLayout;
     private ArrayList<Application> applicationArrayList = new ArrayList<>();
     @Override
@@ -44,7 +49,24 @@ public class AppointmentsFragment extends Fragment {
         View layout = inflater.inflate(R.layout.appointments_fragment, container, false);
 
         mRequestQueue = Volley.newRequestQueue(getActivity());
+        EditText editText = layout.findViewById(R.id.search_editText_appointments);
 
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
         recycler = layout.findViewById(R.id.recyclerview_appointments);
 
         swipeRefreshLayout = layout.findViewById(R.id.appointment_refresh);
@@ -68,7 +90,27 @@ public class AppointmentsFragment extends Fragment {
         return layout;
     }
 
+    private void filter(String text) {
+
+        ArrayList<Application> filteredList = new ArrayList<>();
+        for (Application item : applicationArrayList) {
+            if (item.getUsername().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item);
+            }
+        }
+
+        applicationAdapter = new ApplicationAdapter(getActivity(), filteredList);
+        recycler.setAdapter(applicationAdapter);
+        applicationAdapter.notifyDataSetChanged();
+    }
+
     private void fetchData() {
+        final ProgressDialog progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setTitle("Fetching Appointments");
+        progressDialog.setMessage("Please wait......");
+        progressDialog.setCancelable(false);
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.show();
 
         String urlForJsonObject = Constants.BASE_API + Constants.SPECIALIST_LIST;
 
@@ -117,6 +159,7 @@ public class AppointmentsFragment extends Fragment {
                                 }
                             }
 
+                            progressDialog.dismiss();
 
                             applicationAdapter = new ApplicationAdapter(getActivity(), applicationArrayList);
                          recycler.setAdapter(applicationAdapter);
@@ -130,6 +173,7 @@ public class AppointmentsFragment extends Fragment {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
                 volleyError.printStackTrace();
+                progressDialog.dismiss();
             }
         });
         mRequestQueue.add(request);

@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.kiduyu.njugunaproject.agrifarm.Session.Prevalent;
 import com.kiduyu.njugunaproject.agrifarm.StatusBar.StatusBar;
 import com.kiduyu.njugunaproject.agrifarm.UserFargments.AppointmentsFragment;
 import com.kiduyu.njugunaproject.agrifarm.UserFargments.HomeFragment;
@@ -47,6 +48,10 @@ public class HomeActivity extends AppCompatActivity {
         circleImageView = findViewById(R.id.profile_image_message_activity);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        TextView name =findViewById(R.id.txt_name);
+        TextView phone =findViewById(R.id.txt_email);
+        name.setText(Prevalent.currentOnlineUser.getFullname());
+        phone.setText(Prevalent.currentOnlineUser.getPhone());
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
@@ -123,6 +128,8 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case R.id.logout:
 
+                Prevalent.currentOnlineUser=null;
+                startActivity(new Intent(HomeActivity.this,LoginActivity.class));
                 break;
 
             case R.id.img_noti:

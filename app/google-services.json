@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "271635820596",
+    "firebase_url": "https://agrifarm-28b66.firebaseio.com",
+    "project_id": "agrifarm-28b66",
+    "storage_bucket": "agrifarm-28b66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271635820596:android:cfad090f3b84cb5232da61",
+        "android_client_info": {
+          "package_name": "com.kiduyu.njugunaproject.agrifarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271635820596-qk822rlfnha7cav667v44tl4in0mpg70.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kiduyu.njugunaproject.agrifarm",
+            "certificate_hash": "430f439c9f141977457972fbfa541c97cc72762e"
+          }
+        },
+        {
+          "client_id": "271635820596-11eki4s78ouusqufhccpgfre48ucn6ko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9pZioHEoxcE3WyKeZ9isKkAL8-YvLchA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271635820596-11eki4s78ouusqufhccpgfre48ucn6ko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

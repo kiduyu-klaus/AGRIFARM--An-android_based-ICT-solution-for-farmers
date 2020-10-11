@@ -13,7 +13,7 @@ public class ReportsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View layout = inflater.inflate(R.layout.home_fragment, container, false);
+        View layout = inflater.inflate(R.layout.reports_fragments, container, false);
 
 
 

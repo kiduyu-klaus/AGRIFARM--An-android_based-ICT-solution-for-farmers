@@ -64,8 +64,8 @@
                         android:id="@+id/editTextUname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Username"
-                        android:inputType="text"
+                        android:hint="Phonnumber"
+                        android:inputType="number"
                         android:singleLine="true" />
 
                 </com.google.android.material.textfield.TextInputLayout>

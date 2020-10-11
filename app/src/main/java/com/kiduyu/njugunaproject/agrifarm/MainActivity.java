@@ -16,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         StatusBar.changeStatusBarColor(this);
-        Loading.hideProgressDialog(this);
-        Loading.showProgressDialog(this);
 
     }
 

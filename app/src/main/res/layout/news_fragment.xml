@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/search_editText_tip"
+            android:id="@+id/search_editText_news"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_margin="8dp"

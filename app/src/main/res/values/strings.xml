@@ -21,4 +21,11 @@
     <string name="show_weather">show weather</string>
     <string name="text_view">Text View</string>
     <string name="short_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+
+
+    <string name="name_login">Name</string>
+    <string name="email_login">Username</string>
+    <string name="phone_login">Phone</string>
+    <string name="password_login">Password</string>
+    <string name="no_data_found">No Data Found</string>
 </resources>
